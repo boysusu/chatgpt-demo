@@ -45,7 +45,7 @@ export default () => {
     try {
       const controller = new AbortController()
       setController(controller)
-      const requestMessageList = [...messageList()]
+      const requestMessageList = [...messageList()].slice(-1)
       if (currentSystemRoleSettings()) {
         requestMessageList.unshift({
           role: 'system',
